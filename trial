@@ -1,0 +1,36 @@
+<span id="count">MINING RESULT REVEAL AFTER 6 HOURS</span> BE PATIENT
+
+<a href="#" id="startClock">Start MINING 💎</a>
+jQuery(function($){
+
+   $('#startClock').on('click', doCount);
+
+});
+
+function doCount(){
+
+   var counter = 86400;
+
+   setInterval(function() {
+
+      counter--;
+
+      if (counter >= 0) {
+
+         span = document.getElementById("count");
+
+         span.innerHTML = counter;
+
+      }
+
+      if (counter === 0) {
+
+        alert('sorry, out of time');
+
+        clearInterval(counter);
+
+      }
+
+   }, 1000);
+
+}
